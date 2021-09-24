@@ -77,7 +77,7 @@ function addToDo(toDo, done){
     const item = `
                 <li class="item">
                     <i class="co fa ${DONE}" job="complete"></i>
-                    <p class="text ${LINE}" contenteditable="true">${toDo}</p>
+                    <p class="text ${LINE}" contenteditable="true" job="changeText">${toDo}</p>
                     <i class="de fa fa-close" job="delete"></i>
                 </li>
                 `;
@@ -147,15 +147,19 @@ list.addEventListener("click", function(event){
         completeToDo(element);
     }else if (elementJob == "delete"){
         removeToDo(element);
+    }else if (elementJob == "changeText"){
+        changeText(element);
     }
+
     //add item to localstorage(this code must be added where the LIST array is updated)
     localStorage.setItem("ToDo", JSON.stringify(LIST));
     countTasks();
 });
 
-list.addEventListener("click",function(element){
-    // console.info(element.target.innerText)
-    let index = LIST.findIndex(function(list){return list.name===element.target.innerText})
+function changeText(element){
+// list.addEventListener("input",function(element){
+    console.info(element.innerText)
+    let index = LIST.findIndex(function(list){return list.name===element.innerText})
     // console.info(index)
     list.addEventListener("focusout",function(event){
     const element = event.target;
@@ -165,4 +169,4 @@ list.addEventListener("click",function(element){
     localStorage.setItem("ToDo", JSON.stringify(LIST));
     // console.log(localStorage);
     }); 
-});
+};
