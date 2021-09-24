@@ -142,7 +142,7 @@ function removeToDo(element){
 list.addEventListener("click", function(event){
     const element = event.target; //return the clicked element inside list
     let elementJob;
-    if ( element.attributes.job.value !== undefined ){
+    if ( element.attributes.job !== undefined ){
       elementJob = element.attributes.job.value; //complete or delete - (check the attribute job value)
     }else{
       elementJob = "";
