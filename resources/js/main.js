@@ -1,4 +1,3 @@
-
 const clear = document.querySelector(".clear");
 const dateElement = document.querySelector("#date");
 const list = document.querySelector("#list");
@@ -94,7 +93,7 @@ document.addEventListener("keyup",function(event){
 });
 
 document.querySelector(".add").addEventListener("click", function(event){
-    console.info(event)
+    // console.info(event)
     addToDoList();
 });
 
