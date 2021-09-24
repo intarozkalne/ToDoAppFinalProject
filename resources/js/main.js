@@ -62,9 +62,15 @@ dateElement.innerHTML = localDate;
 
 
 function countTasks(){
+    let sum = 0
+    for (i=0; i<LIST.length;i++){
+        if (LIST[i].done ==false)
+          sum++;
+    
+    }
 
-const tasksCounts = document.querySelector("#tasksCount");
-tasksCounts.innerHTML = `You have ${LIST.length} tasks`
+   const tasksCounts = document.querySelector("#tasksCount");
+   tasksCounts.innerHTML = `You have ${sum} of ${LIST.length} tasks`
 }
 
 //addToDo
