@@ -150,7 +150,6 @@ list.addEventListener("click", function(event){
     }else if (elementJob == "changeText"){
         changeText(element);
     }
-
     //add item to localstorage(this code must be added where the LIST array is updated)
     localStorage.setItem("ToDo", JSON.stringify(LIST));
     countTasks();
