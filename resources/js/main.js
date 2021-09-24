@@ -141,7 +141,12 @@ function removeToDo(element){
 //target the items created dynamicaly
 list.addEventListener("click", function(event){
     const element = event.target; //return the clicked element inside list
-    const elementJob = element.attributes.job.value; //complete or delete - (check the attribute job value)
+    let elementJob;
+    if ( element.attributes.job.value !== undefined ){
+      elementJob = element.attributes.job.value; //complete or delete - (check the attribute job value)
+    }else{
+      elementJob = "";
+    }
     
     if (elementJob =="complete"){
         completeToDo(element);
