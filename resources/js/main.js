@@ -153,12 +153,16 @@ list.addEventListener("click", function(event){
     countTasks();
 });
 
-// list.addEventListener("focusout",function(event){
-//     const element = event.target;
-//    console.log(element.innerText);
-//    let index = LIST.findIndex(function(list){return list.name===element.innerText})
-//    LIST[index].name = element.innerText;
-//     //console.log(localStorage);
-//     localStorage.setItem("ToDo", JSON.stringify(LIST));
-//    console.log(localStorage);
-// }); 
+list.addEventListener("click",function(element){
+    // console.info(element.target.innerText)
+    let index = LIST.findIndex(function(list){return list.name===element.target.innerText})
+    // console.info(index)
+    list.addEventListener("focusout",function(event){
+    const element = event.target;
+    // console.log(element.innerText);
+    LIST[index].name = element.innerText;
+    //console.log(localStorage);
+    localStorage.setItem("ToDo", JSON.stringify(LIST));
+    // console.log(localStorage);
+    }); 
+});
