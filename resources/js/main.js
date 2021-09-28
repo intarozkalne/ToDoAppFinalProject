@@ -168,7 +168,7 @@ list.addEventListener("click", function(event){
 
 function changeText(element){
 // list.addEventListener("input",function(element){
-    console.info(element.innerText)
+    // console.info(element.innerText)
     let index = LIST.findIndex(function(list){return list.name===element.innerText})
     // console.info(index)
     list.addEventListener("focusout",function(event){
