@@ -172,7 +172,7 @@ function changeText(element){
     let index = LIST.findIndex(function(list){return list.name===element.innerText})
     // console.info(index)
     list.addEventListener("input",function(event){
-    const element = event.target;
+   // const element = event.target;
     // console.log(element.innerText);
     LIST[index].name = element.innerText;
     //console.log(localStorage);
