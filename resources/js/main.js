@@ -38,10 +38,10 @@ clear.addEventListener("click", function(){
 })
 
 //show date
-// const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-// const today = new Date();
+//const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+//const today = new Date();
 //today.setHours(0,0,0,0)
-// dateElement.innerHTML = today.toLocaleTimeString(undefined,options);
+//dateElement.innerHTML = today.toLocaleTimeString(undefined,options);
 
 let weekDays = new Array(7);
         weekDays[0] = "Sunday";
@@ -69,8 +69,8 @@ function countTasks(){
     
     }
 
-   const tasksCounts = document.querySelector("#tasksCount");
-   tasksCounts.innerHTML = `You have ${sum} of ${LIST.length} tasks`
+    const tasksCounts = document.querySelector("#tasksCount");
+    tasksCounts.innerHTML = `You have ${sum} of ${LIST.length} tasks`
 }
 
 //addToDo
@@ -99,7 +99,7 @@ document.addEventListener("keyup",function(event){
 });
 
 document.querySelector(".add").addEventListener("click", function(event){
-    // console.info(event)
+    //console.info(event)
     addToDoList();
 });
 
@@ -107,22 +107,20 @@ function addToDoList(){
     const toDo = input.value;       
 
 //if the input is not empty
-        if(toDo){
-            addToDo(toDo, false);
+    if(toDo){
+        addToDo(toDo, false);
 
-            LIST.push({
-                name:toDo,
-                done:false,
-            });
+        LIST.push({
+            name:toDo,
+            done:false,
+        });
 
  //add item to localstorage
-            localStorage.setItem("ToDo", JSON.stringify(LIST));
-
-        }
-        input.value = "";
-        countTasks()
-
-    };
+        localStorage.setItem("ToDo", JSON.stringify(LIST));
+    }
+    input.value = "";
+    countTasks()
+};
 
 //complete to do
 function completeToDo(element){
@@ -148,10 +146,10 @@ function removeToDo(element){
 list.addEventListener("click", function(event){
     const element = event.target; //return the clicked element inside list
     let elementJob;
-    if ( element.attributes.job !== undefined ){
-      elementJob = element.attributes.job.value; //complete or delete - (check the attribute job value)
+    if (element.attributes.job !== undefined){
+        elementJob = element.attributes.job.value; //complete or delete - (check the attribute job value)
     }else{
-      elementJob = "";
+        elementJob = "";
     }
     
     if (elementJob =="complete"){
@@ -167,12 +165,11 @@ list.addEventListener("click", function(event){
 });
 
 function changeText(element){
-// list.addEventListener("dblclick",function(element){
     // console.info(element.innerText)
     let index = LIST.findIndex(function(list){return list.name===element.innerText})
     // console.info(index)
     list.addEventListener("input",function(event){
-   // const element = event.target;
+    // const element = event.target;
     // console.log(element.innerText);
     LIST[index].name = element.innerText;
     //console.log(localStorage);

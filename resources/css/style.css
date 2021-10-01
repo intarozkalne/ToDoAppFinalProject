@@ -45,7 +45,6 @@ body{
 .clear i:hover{
     cursor: pointer;
     color:#af0000;
-    /* transform: rotate(45deg); */
 }
 
 #date{
@@ -54,7 +53,6 @@ body{
     left: 10px;
     color: #FFF;
     font-size: 30px;
-        
 }
 
 #tasksCount{
@@ -69,16 +67,17 @@ body{
     height: 450px;
     overflow: auto;
     padding-top: 15px
-    
 }
 
 .content::-webkit-scrollbar { 
     display: none; 
 }
+
 .content ul{
     padding:0;
     margin:0;
 }
+
 .item{
     width:100%;
     min-height: 45px;
@@ -89,8 +88,8 @@ body{
     list-style: none;
     padding: 0;
     margin: 0 0 10px 0;
-    
 }
+
 .item i.co{
     position: absolute;
     font-size: 20px;
@@ -99,6 +98,7 @@ body{
     top:12px;
     /* color: #29264A; */
 }
+
 .item i.co:hover{
     cursor: pointer;
 }
@@ -110,6 +110,7 @@ body{
 .fa-check-circle{
     color:#097a2f;
 }
+
 .item p.text{
     position: relative;
     padding:0;
@@ -121,10 +122,12 @@ body{
     max-width:285px;
     color:#29264A
 }
+
 .lineThrough{
     text-decoration: line-through;
     color : #ccc;
 }
+
 .item i.de{
     position: absolute;
     font-size: 25px;
@@ -133,6 +136,7 @@ body{
     font-size: 15px;
     color: #29264A
 }
+
 .item i.de:hover{
     color:#af0000;
     cursor: pointer;
@@ -175,7 +179,7 @@ body{
     background-color: none;
 }
 
-.add input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.add input::-webkit-input-placeholder{
     color: #29264A;
     font-size: 20px;
     padding: 20px;
